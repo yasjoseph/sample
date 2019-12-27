@@ -1,0 +1,23 @@
+*{
+    text-decoration: none;
+
+}
+li{
+    list-style: none;
+    display: inline;
+    margin: 5px;
+    
+}
+ul{
+    margin: 20px;
+}
+a{
+    color: #fff;
+    
+    
+}
+a:hover{
+    color: rgba(255, 255, 255, 0.7);
+    
+    
+}
