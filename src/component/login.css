@@ -3,28 +3,26 @@
 *{
 	box-sizing:	border-box;
 }
-body{
-	width:1000px;
-	margin:0 auto; 
-	padding:0;
-	/* background:	steelblue; */
-}
+
 .form-container{
 	width: 800px;
-	height:500px;
+	/* height:500px; */
 	margin: 30px auto 25px;
 	background-image: url("images/img2.jpg");
 	background-size	:cover;
 	overflow: hidden;
+	animation-name: slideInLeft;
+	animation-duration: 5s;
      filter: blur(0.2px); 
 	
 
 }
 .login-form{
 	width: 450px;
-	height:400px;
+	/* height:400px; */
 	margin: 50px auto 25px;
 	transition: width 2s,border-radius 2s;
+
 	border-radius: 0;
 	padding:50px;
 	background :rgba(0,0,0,0.5);
@@ -50,11 +48,11 @@ body{
 
 .login-form button {
 	width:30%;
-	height: 40px;
+	height: 35px;
 	font-family: 'Titillium Web', sans-serif;
 	text-align: center;
-	text-transform: uppercase;
-	border: 2px solid #fff;
+	
+	border: 1px dotted #fff;
 	background: steelblue;
 	color: #fff;
 	cursor: pointer;
@@ -69,17 +67,18 @@ body{
 
   h1 {
 
-	animation-name: color-animate;
-	animation-duration: 5s;
-	animation-iteration-count: infinite;
+	text-align: center;
+	animation-name: slideInLeft;
+	animation-duration: 3s;
+
 	
   }
   .login-form:hover{
 	border-radius: 70%;
-	width: 700px;
+	/* width: 700px; */
 		
 	}
-  @keyframes color-animate {
+  /* @keyframes color-animate {
 	0% {
 	  opacity: 0.2;
 	
@@ -118,4 +117,19 @@ body{
 	  }
 
   }
+   */
+   
+  @keyframes slideInLeft {
+	from {
+	  -webkit-transform: translate(-45%);
+	  transform: translate(-45%);
+	  visibility: visible;
+	}
   
+	to {
+	  -webkit-transform: translate(0, 0);
+	  transform: translate(0, 0);
+	}
+  }
+  
+	

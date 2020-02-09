@@ -1,0 +1,61 @@
+.pagination{
+    width: 50px;
+    margin: 5px;
+   border:none;
+    outline: none;
+    color: whitesmoke;
+    border-radius: 50%;
+    text-align: center;
+  
+
+}
+.redColor{
+  background-color: red;
+  width: 50px;
+    margin: 5px;
+   border:none;
+    outline: none;
+    color: whitesmoke;
+    border-radius: 50%;
+    text-align: center;
+
+}
+.blueColor{
+  background-color: blue;
+  width: 50px;
+    margin: 5px;
+   border:none;
+    outline: none;
+    color: whitesmoke;
+    border-radius: 50%;
+    text-align: center;
+
+}
+button{
+  font-size:  25px;
+   background-color: blue;
+   border:none;
+   color: white;
+   margin-left: 5px;
+}
+
+.btnList {
+ background-color: white;
+  color: black;
+ 
+}
+.dropdown-menu {
+  width: 1% !important;
+}
+button[disabled]{
+  opacity: 0.1;
+  cursor: none;
+ 
+}
+#icons{
+  width: 40p;
+  font-size: 25px;
+  text-align: center;
+  padding-top:20px;
+ 
+}

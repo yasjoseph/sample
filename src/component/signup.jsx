@@ -6,6 +6,7 @@ class Signup extends React.Component{
         return(
 
             <p>
+            <h1>Login</h1>
             <div className="form-container">
             <form className="login-form" >
                
@@ -19,7 +20,7 @@ class Signup extends React.Component{
                    <input id="userpassword" type="password" name="password" placeholder="password"/>
                    
                </p>
-               <button  type="submit">Signup</button>
+               <button  type="submit">Login</button>
                
            </form>
        </div>

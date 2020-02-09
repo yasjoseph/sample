@@ -1,10 +1,12 @@
 import React from 'react';
 
+import Api from '../core-component/api.service';
+
 import Table from '../core-component/table';
 
 
 class Tbl extends React.Component {
-  comments=[
+  comments = [
     {
       "postId": 1,
       "id": 1,
@@ -3506,8 +3508,41 @@ class Tbl extends React.Component {
       "body": "perspiciatis quis doloremque\nveniam nisi eos velit sed\nid totam inventore voluptatem laborum et eveniet\naut aut aut maxime quia temporibus ut omnis"
     }
   ]
+  headings = ["postId",
+    "id",
+    "name",
+    "email",
+    "body",
   
-  
+  ];
+  employee = [
+    {
+      "Name": "youssouf",
+      "age": 22,
+      "profession": "student"
+    },
+    {
+      "Name": "ali",
+      "age": 22,
+      "profession": "dev"
+    },
+    {
+      "Name": "soilihi",
+      "age": 22,
+      "profession": "student"
+    }
+  ]
+  newHeadings = ["Name", "age", "profession"];
+
+  constructor(){
+    super();
+    let api = new Api();
+    api.get().then(
+      (data) => {
+        console.log(data)
+      }
+    )
+  }
   render() {
     return (
 
@@ -3539,7 +3574,11 @@ class Tbl extends React.Component {
 
 
     </table>*/}
-    <Table data={this.comments}></Table>
+
+
+        {/* <Table data={this.employee} headings={this.newHeadings}></Table> */}
+
+        <Table data={this.comments} headings={this.headings}></Table>
       </div>
     )
   }

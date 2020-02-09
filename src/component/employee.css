@@ -1,0 +1,21 @@
+.card-content{
+    width: 220px;
+    margin: 5px;
+    padding:10px;
+    float: left;
+    border: 1px solid rgb(60, 255, 0);
+}
+.ename,.eid{
+    text-transform:uppercase;
+    font-weight: bold;
+}
+.card-header{
+   letter-spacing: 3px;
+    text-align: center;
+    font-weight: bold;
+    margin: 5px;
+}
+.eview a{
+  
+    text-decoration: none;
+}

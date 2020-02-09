@@ -2,21 +2,29 @@ import React from 'react';
 
 import './App.css';
 import Header from './component/header';
-import Login from './component/login'
-import Signup from './component/signup';
-import Tbl from './component/table';
-import Pnf from './component/pnf';
+import Main from './component/main';
+import Cycle from './component/Cycle';
+// import Employee from './component/employee';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
       <div className="App-header">
-        <Header></Header>
-         <Tbl></Tbl>
+
+        <BrowserRouter>
+          <Header></Header>
+          <Main></Main>
+          <Cycle></Cycle>
+
+        </BrowserRouter>
+        {/* <Tbl></Tbl>
         <Login></Login>
         <Signup></Signup>
-        
-          <Pnf></Pnf>
+         <Pnf></Pnf>
+         */}
+
+
       </div>
     </div>
   );
