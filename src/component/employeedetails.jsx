@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Empld from '../core-component/empld';
 import XLSX from 'xlsx';
 import { EmpConsumer } from './providers/Provider';
+import Api from '../core-component/api.service';
 
 class EmployeeDetails extends Component {
 
@@ -21,14 +22,31 @@ class EmployeeDetails extends Component {
   };
 
   downloadExcel() {
-    /* convert from array of arrays to workbook */
-    var worksheet = XLSX.utils.json_to_sheet([this.employee]);
-    var new_workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(new_workbook, worksheet, "SheetJS");
+    
 
 
-    /* save to file */
-    XLSX.writeFile(new_workbook, 'SheetJS.xlsx');
+    let api=new Api();
+    console.log('before api request')
+    console.log(this.employee);
+    console.log('before api request')
+
+    api.post('posts', this.employee).then(
+      (data) => {
+        console.log('after api request')
+
+        console.log(data)
+        console.log('after api request')
+
+        /* convert from array of arrays to workbook */
+        var worksheet = XLSX.utils.json_to_sheet([data.data]);
+        var new_workbook = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(new_workbook, worksheet, "SheetJS");
+    
+    
+        /* save to file */
+        XLSX.writeFile(new_workbook, 'SheetJS.xlsx');
+      }
+    )
 
   }
 
@@ -39,13 +57,14 @@ class EmployeeDetails extends Component {
           <h1>Employee Details</h1>
 
 
-          <Empld empDetails={this.employee}></Empld>
           {/* consumer component */}
           <EmpConsumer>
               {
                 (employee)=>(
                   // this employeeId is coming the provider data
-                <p>{employee.employeeId}</p> 
+                <Empld empDetails={employee.employee}></Empld>
+                // console.log(employee)
+
                 
                 )
 

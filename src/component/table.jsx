@@ -3513,7 +3513,7 @@ class Tbl extends React.Component {
     "name",
     "email",
     "body",
-  
+
   ];
   employee = [
     {
@@ -3534,10 +3534,10 @@ class Tbl extends React.Component {
   ]
   newHeadings = ["Name", "age", "profession"];
 
-  constructor(){
+  constructor() {
     super();
     let api = new Api();
-    api.get().then(
+    api.get('comments').then(
       (data) => {
         console.log(data)
       }

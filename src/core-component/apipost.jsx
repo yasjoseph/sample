@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+// import React, { Component } from 'react';
+// this components is not used
 import axios from 'axios';
  class ApiPost  {
   get(){
